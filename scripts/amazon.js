@@ -27,16 +27,7 @@ const products = [
       count: 65,
     },
     priceCents: 5999,
-  },
-  {
-    image: "images/products/sports-water-bottle.jpg",
-    name: " Sports Water Bottle - 750ml",
-    rating: {
-      stars: 4.6,
-      count: 200,
-    },
-    priceCents: 1599,
-  },
+  }
 ];
 
 let productsHTML = "";
@@ -53,7 +44,7 @@ products.forEach((product) => {
      </div>
      <div class="product-rating-container">
        <img class="product-rating-stars"
-         src="images/icons/star-rating-${Math.round(product.rating.stars)}.png">
+         src="">
        <div class="product-rating-count link-primary">
             ${product.rating.count} count
        </div> 
@@ -90,4 +81,4 @@ products.forEach((product) => {
 
 console.log(productsHTML);
 
-document.querySelector(".product-containers").innerHTML = productsHTML;
+document.querySelector('.products-grid').innerHTML = productsHTML; 
