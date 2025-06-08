@@ -89,3 +89,5 @@ products.forEach((product) => {
 });
 
 console.log(productsHTML);
+
+document.querySelector(".product-containers").innerHTML = productsHTML;
