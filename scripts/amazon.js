@@ -1,11 +1,7 @@
-
-
-
 let productsHTML = "";
 
-
 products.forEach((product) => {
- productsHTML += `   <div class="product-container">
+  productsHTML += `   <div class="product-container">
      <div class="product-image-container">
        <img class="product-image"
          src=${product.image}>
@@ -15,9 +11,11 @@ products.forEach((product) => {
      </div>
      <div class="product-rating-container">
        <img class="product-rating-stars"
-         src="images/ratinngs/ratings/${product.rating.stars.toString().replace('.', '-')}.png">
+         src="images/ratings/${product.rating.stars
+           .toString()
+           .replace(".", "-")}.png">
        <div class="product-rating-count link-primary">
-            ${product.rating.count} Reviews
+            ${product.rating.count} 
        </div> 
      </div>
      <div class="product-price">
@@ -42,20 +40,16 @@ products.forEach((product) => {
        <img src="images/icons/checkmark.png">
        Added
      </div>
-     <button class="add-to-cart-button button-primary">
+     <button class="add-to-cart-button button-primary js-add-to-cart">
        Add to Cart
      </button>
-   </div>` ;
-
-  
+   </div>`;
 });
 
-console.log(productsHTML);
+document.querySelector(".products-grid").innerHTML = productsHTML;
 
-document.querySelector('.products-grid').innerHTML = productsHTML; 
-
-document.querySelectorAll('.js-add-to-cart').forEach((button) => {
-    button.addEventListener('click',()=> {
-
-    })
+document.querySelectorAll(".js-add-to-cart").forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log("Add to cart button clicked");
+  });
 });
