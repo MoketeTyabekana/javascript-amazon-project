@@ -70,7 +70,16 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
       cart.push({
         productId: productId,
         quantity: 1, // Default quantity
-      });
+      })
+
+       let cartQuantity = 0;
+
+      cart.forEach((item)=> {
+       cartQuantity += item.quantity;
+      })
+
+      document.querySelector(".js-cart-qauntity").innerHTML = cartQuantity;
+      console.log(`${cartQuantity}`);
       console.log(cart);
     }
   });
