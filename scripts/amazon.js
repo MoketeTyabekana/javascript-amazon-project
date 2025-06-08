@@ -18,7 +18,7 @@ products.forEach((product) => {
             ${product.rating.count} 
        </div> 
      </div>
-     <div class="product-price">
+     <div class="product-price">$
        ${(product.priceCents / 100).toFixed(2)}
      </div>
      <div class="product-quantity-container">
